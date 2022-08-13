@@ -62,5 +62,14 @@
     <ClInclude Include="linkListTest.h">
       <Filter>源文件</Filter>
     </ClInclude>
+    <ClInclude Include="StackTest.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StackList.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

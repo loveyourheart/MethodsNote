@@ -1,6 +1,8 @@
 #pragma once
-#include "Student.h"
+#include<stdio.h>
+#include <malloc.h>
 #include "define.h"
+#include "oftenUseBaseData.h"
 typedef int ElemType;
 void printfElemType(int e) {
 	 printf("%d ", e);

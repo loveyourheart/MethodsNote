@@ -1,12 +1,18 @@
 #pragma once
 #include<stdio.h>
 #include"linkList.h"
-#include "oftenUseBaseData.h"
 void initLinkListTest() {
-	LinkList list, LB, C;
-	LNode *p, * q;
-	initLinkList(list);
-	initLinkList(LB);
-	initLinkList(C);
-	
+	LinkList L;
+	LNode* s,*t;
+	LNode *p;
+	initLinkList(L);
+	createlistR(L, intnum, 12);
+	printfLinkListElem(L);
+	s = getTrailPointer(L);
+	t = find(L, 2);
+	s->next = t;
+	if (IsHaveCycle(L, p)) {
+		//printfLNode(p);
+		printf("%d  ",p->data);
+	}
 }   

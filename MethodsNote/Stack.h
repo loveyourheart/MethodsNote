@@ -1,87 +1,35 @@
 #pragma once
-#include<iostream>
-#include<cstdio>
-#include<string>
-#include<stack>
-#include<queue>
-#include<map>
-using namespace std;
-struct node
-{
-	double num;
-	char op;
-	bool flag;
-};
-
-string str;
-stack<node> s;
-queue<node> q;
-map<char, int> op;
-void Change() {
-	double num;
-	node temp;
-	for (int i = 0; i < str.length();) {
-		if (str[i] >= '0' && str[i] <= '9') {
-			temp.flag = true;
-			temp.num = str[i++] - '0';
-			while (i < str.length() && str[i] >= '0' && str[i] <= '9') {
-				temp.num = temp.flag * 10 + (str[i] - '0');
-				i++;
-			}
-			q.push(temp);
-		}
-		else
-		{
-			temp.flag = false;
-			while (!s.empty() && op[str[i]] <= op[s.top().op]) {
-				q.push(s.top());
-				s.pop();
-			}
-			temp.op = str[i];
-			s.push(temp);
-			i++;
-		}
-
-	}
-	while (!s.empty()) {
-		q.push(s.top());
-		s.pop();
-	}
-
+#include "ElemType.h"
+typedef struct SqStack {
+	ElemType data[StackMaxSize];
+	int top;
+} SqStack;
+void initiate(SqStack& st) {
+	st.top = -1;
 }
-double Cal() {
-	double temp1, temp2;
-	node cur, temp;
-	while (!q.empty()) {
-		cur = q.front();
-		q.pop();  
-		if (cur.flag == true) s.push(cur);
-		else {
-			temp2 = s.top().num;
-			s.pop();
-			temp1 = s.top().num;
-			s.pop();
-			temp.flag = true;
-			if (cur.op == '+')         temp.num = temp1 + temp2;
-			else if (cur.op == '-')    temp.num = temp1 - temp2;
-			else if (cur.op == '*')    temp.num = temp1 * temp2;
-			else  temp.num = temp1 / temp2;
-			s.push(temp);
-		}
-	}
-	return s.top().num;
+int isEmpty(SqStack st) {
+	return st.top == -1;
 }
-void calTest() {
-	op['+'] = op['-'] = 1;
-	op['*'] = op['/'] = 2;
-	while (getline(cin, str), str != "0") {
-		for (string::iterator it = str.begin(); it != str.end(); it++) {
-			if (*it == ' ') str.erase(it);                                                                                                                                                                                                                                                                                        
-		}
-		while(!s.empty()) {
-			s.pop();
-		}
-		Change();
-		printf("%.2f\n", Cal());
-	}
-} 
+int push(SqStack& st, int x) {
+	if (st.top == StackMaxSize) return 0;
+	st.data[++st.top] = x;
+	return 1;
+}
+int pop(SqStack& st, int& x) {
+	if (st.top == -1) return 0;
+	x = st.data[st.top--];
+	return 1;
+}
+int get(SqStack& st, int& x) {
+	if (st.top == -1) return 0;
+	x = st.data[st.top];
+	return 1;
+}
+int simpleStackWrite() {
+	int stack[StackMaxSize]; 
+	int top = -1; 
+	ElemType x;
+	stack[++top] = x; // 一句话实现进栈
+	x = stack[top--]; // 一句话实现
+	return 0;
+}

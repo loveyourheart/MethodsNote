@@ -9,7 +9,9 @@
 typedef int Staus;
 
 #define SeqListMaxSize 100 //顺序表的最大长度
-
+#define StackMaxSize 100
+#define QueueMaxSize 100
+#define MaxVertexNum 100
 #define  MAX_SIZE  100  
 #define  SWAP(x,y,t)  ((t) = (x),(x) = (y),(y) = (t)) 
 #define  MAX_TERMS  101  
@@ -24,8 +26,7 @@ typedef int Staus;
 
 #define  MAX_ELEMENTS 200  
 #define  HEAP_FULL(n) (n == MAX_ELEMENTS - 1) 
-#define  HEAP_EMPTY(n) (!n)   
-#define  MAX_VERTICES  50   
+#define  HEAP_EMPTY(n) (!n)     
 
 //浮点数的大小比较
 const double eps = 1e-8;

@@ -27,11 +27,14 @@
     <ClInclude Include="ElemType.h" />
     <ClInclude Include="linkListTest.h" />
     <ClInclude Include="oftenUseBaseData.h" />
+    <ClInclude Include="Queue.h" />
     <ClInclude Include="search.h" />
     <ClInclude Include="SeqList.h" />
     <ClInclude Include="SeqListTest.h" />
     <ClInclude Include="sort.h" />
     <ClInclude Include="Stack.h" />
+    <ClInclude Include="StackList.h" />
+    <ClInclude Include="StackTest.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="test.h" />
     <ClInclude Include="Graph.h" />

@@ -1,7 +1,4 @@
 #pragma once
-#include<stdio.h>
-#include <malloc.h>
-#include "define.h"
 #include "ElemType.h"
 #include<assert.h>
 typedef struct LNode {
@@ -158,7 +155,7 @@ int clear(LinkList& L) {
 
 	return 0;
 }
-int IsEmpty(LinkList &L) {
+int isEmpty(LinkList &L) {
 	if (L->next == NULL) return 1;
 	return 0;
 }
@@ -360,15 +357,34 @@ void spliteByParityABLinkBisInsertF(LinkList& A, LinkList& B) {
 		insertlistF(B, temp);
 	}
 }
-int IsHaveCycle(LinkList &L) {
-	LNode* p, * q,*r, * s;
+int IsHaveCycle(LinkList &L,LinkList &s) {
+	LNode* p, * q,*r;
 	p = L;
 	q = L->next;
+	s = L;
+	int t = 0;
 	while (q!=NULL&&q->next != NULL && q != p) {
 		p = p->next;
 		q = q->next->next;
 	}
 	if (q == p) {
+		while (1) {
+			r = p->next;
+			if (r == p) {
+				s = r;
+			}
+			while (r != p) {
+				if (s == r) {
+					t = 1;
+					break;
+				}
+				r = r->next;
+			}
+			if (t == 1) {
+				break;
+			}
+			s = s->next;
+		}
 		return 1;
 	}
 	return 0;

@@ -1,5 +1,6 @@
 #pragma once
-#define MaxVertexNum 100
+#include "ElemType.h"
+
 typedef char VertexType;
 typedef int  EdgeType;
 typedef struct {
