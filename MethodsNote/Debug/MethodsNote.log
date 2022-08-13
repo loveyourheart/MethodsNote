@@ -1,0 +1,13 @@
+﻿  main.cpp
+E:\software\C\MethodsNote\MethodsNote\define.h(8,1): warning C4005: “OVERFLOW”: 宏重定义
+D:\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math.h(965): message : 参见“OVERFLOW”的前一个定义
+E:\software\C\MethodsNote\MethodsNote\stack.h(23,20): warning C4018: “<”: 有符号/无符号不匹配
+E:\software\C\MethodsNote\MethodsNote\stack.h(27,13): warning C4018: “<”: 有符号/无符号不匹配
+E:\software\C\MethodsNote\MethodsNote\stack.h(21,9): warning C4101: “num”: 未引用的局部变量
+E:\software\C\MethodsNote\MethodsNote\SeqListTest.h(67,21): warning C4101: “temp1”: 未引用的局部变量
+E:\software\C\MethodsNote\MethodsNote\linkList.h(71,24): warning C4101: “s”: 未引用的局部变量
+E:\software\C\MethodsNote\MethodsNote\linkList.h(364,22): warning C4101: “s”: 未引用的局部变量
+E:\software\C\MethodsNote\MethodsNote\linkList.h(364,17): warning C4101: “r”: 未引用的局部变量
+E:\software\C\MethodsNote\MethodsNote\linkListTest.h(7,9): warning C4101: “p”: 未引用的局部变量
+E:\software\C\MethodsNote\MethodsNote\linkListTest.h(7,14): warning C4101: “q”: 未引用的局部变量
+  MethodsNote.vcxproj -> E:\software\C\MethodsNote\Debug\MethodsNote.exe
